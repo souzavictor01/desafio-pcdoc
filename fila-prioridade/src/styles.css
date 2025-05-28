@@ -1,0 +1,52 @@
+
+body{
+
+
+  text-align: center;
+  background-color: #027361;
+
+}
+
+.full-width {
+  width: 100%;
+}
+
+mat-card {
+  margin: 20px auto;
+  max-width: 500px;
+
+}
+
+mat-card-title {
+  font-weight: bold;
+  font-size: 24px;
+  color:#107715 ;
+}
+
+
+.item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.item-text {
+  font-size: 16px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1 1 auto;
+}
+
+button {
+  flex-shrink: 0;
+  white-space: nowrap;
+
+  color: #107715;
+}
+
+
+

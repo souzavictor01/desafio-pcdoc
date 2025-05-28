@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-title>Clinica PCDOC</mat-card-title>
+  <br>
+  <mat-card-content>
+    <form (ngSubmit)="adicionar()">
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="cliente.nome" name="nome" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Tipo</mat-label>
+        <mat-select [(ngModel)]="cliente.tipo" name="tipo">
+          <mat-option *ngFor="let tipo of tipos" [value]="tipo">{{ tipo }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">
+        Incluir na Fila
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>
