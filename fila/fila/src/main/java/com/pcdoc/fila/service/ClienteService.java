@@ -2,17 +2,23 @@ package com.pcdoc.fila.service;
 
 import com.pcdoc.fila.model.Cliente;
 import com.pcdoc.fila.repository.ClienteRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import lombok.RequiredArgsConstructor;
+
+// import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.List;
 
+@RequiredArgsConstructor
 @Service
 public class ClienteService {
 
-    @Autowired
-    private ClienteRepository repository;
+    private final ClienteRepository repository;
+
+    // @Autowired
+    // private ClienteRepository repository;
 
     // Adiciona um cliente na fila, calculando a prioridade com base no tipo
     public Cliente adicionar(Cliente cliente) {
@@ -27,7 +33,7 @@ public class ClienteService {
         return fila;
     }
 
-     // Remove um cliente da fila pelo ID (atendimento concluído)
+    // Remove um cliente da fila pelo ID (atendimento concluído)
     public void atender(Long id) {
         repository.deleteById(id);
     }
